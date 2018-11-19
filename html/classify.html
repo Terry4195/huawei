@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link href="images/logo/favicon.ico" rel="shortcut icon">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/css/index.css"/>
+		<style type="text/css">
+			#content .home{
+				height: 40px;
+				line-height: 40px;
+			}
+			#content .home-dl{
+				height: auto;
+				overflow: hidden;
+			}
+			#content .home-dl dl{
+				width: 224px;
+				height: 282px;
+				border: 1px solid #ccc; 
+				text-align: center;
+				padding-top: 30px;
+				font-size: 12px;
+				float: left;
+			}
+			#content .home-dl dt:hover{
+				opacity: 0.5;
+			}
+			#content .home-dl dl{
+				margin:0 7px;
+				margin-top: 15px;
+			}
+			#content .home-dl dl img{
+				width: 176px;
+				height: 174px;
+			}
+			#content .home-dl dl dd{
+				line-height: 50px;
+				
+			}
+			#content .home-dl dl p{
+				font-weight: normal;
+				color: red;
+			}
+			#content .home-dl .pane{
+				height: 20px;
+				border-top: 1px solid #ccc;
+				line-height: 38px;
+				
+			}
+			#content .home-dl .pane .panic a{
+				width: 49%;
+				height: 38px;
+				float: left;
+				border-right: 1px solid #ccc;
+				color: red;
+			}
+			#content .home-dl .pane .comment{
+				width: 50%;
+				height: 38px;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<!--头部-->
+		<div id="header">
+			<div id="box">
+				
+			</div>
+		</div>
+		
+		<!--内容部分-->
+		<div id="content">
+			<div class="home">
+				<a href="/index.html">首页</a>
+				<b> > </b>
+				<b>手机</b>
+			</div>
+			<div class="home-dl">
+			</div>
+			<script type="text/html" id="classify-phone">
+				{{each xiangqing item i}}
+					<dl>
+						<dt><a href="/html/detailsxq.html?id={{xiangqing[i].id}}"><img src="{{xiangqing[i].src}}" ></a></dt>
+						<dd>{{xiangqing[i].name}}</dd>
+						<p>{{xiangqing[i].price}}</p>
+						<div class="pane">
+							<div class="panic"><a href="/html/detailsxq.html?id={{xiangqing[i].id}}">{{xiangqing[i].xiangqing}}</a></div>
+							<div class="comment">{{xiangqing[i].comment}}</div>
+						</div>
+					</dl>
+				{{/each}}
+			</script>
+		</div>	
+		
+		<!--登录框-->
+		<div class="login">	
+		</div>
+		
+		<!--尾部-->
+		<div class="footer">
+			
+		</div>
+		<div class="footer-two">
+			
+		</div>
+		<script src="/libs/require/require.js" data-main="/js/index.js"></script>
+		
+		
+	</body>
+</html>

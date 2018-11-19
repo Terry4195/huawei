@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/css/index.css"/>
+		<style>
+			#shop-box{
+				height: auto;
+				width: 100%;
+				background: #f5f5f5;
+			}
+			#shop-box-content{
+				width: 1200px;
+				height: auto;
+				margin: 0 auto;
+				min-width: 1200px;
+			}
+			#shop-box-content .ul1-one{
+				height: 40px;
+				background: #fff;
+				padding-left: 20px;
+				font-size: 14px;
+			}
+			#shop-box-content .ul1-one li{
+				float:left ;
+				line-height: 40px;
+			}
+			#shop-box-content .ul1-one li:first-child{
+				width: 98px;
+			}
+			#shop-box-content .ul1-one li:first-child input{
+				margin-right: 10px;
+			}
+			#shop-box-content .ul1-one li:nth-child(2){
+				width: 135px;
+				margin-right: 358px;
+				text-align: center;
+			}
+			#shop-box-content .ul1-one li:nth-child(n+3){
+				width: 190px;
+				text-align: center;
+			}
+			#shop-content{
+				margin-top: 15px;
+				height: auto;
+				background: #fff;
+			}
+			.catt{
+				padding-top:15px;
+				height: 140px;
+				background: #fff;
+			}
+			.choose{
+				float: left;
+				width: 100px;
+				padding-top: 20px;
+				padding-left: 20px;
+			}
+			.phone-huawei{
+				float: left;
+				width: 530px;
+			}
+			.phone-huawei img{
+				width: 84px;
+				height: 94px;
+				float: left;
+			}
+			.phone-huawei span{
+				display: inline-block;
+				float: left;
+			}
+			.price{
+				float: left;
+				margin-left: 40px;
+				width: 160px;
+			}
+			.number{
+				width: 135px;
+				float: left;
+				margin-left: 20px;
+			}
+			.number-box{
+				border: 1px solid #ccc;
+				width: 66px;
+				height: 46px;
+				position: relative;
+			}
+			.number-box span{
+				padding-left: 10px;
+				display: inline-block;
+				height: 46px;
+				line-height: 46px;
+				width: 30px;
+			}
+			.number-box button{
+				width: 23px;
+				height: 23px;
+				background: #fff;
+				border: none;
+				border-left: 1px solid #ccc;
+				position: absolute;
+				right: 0;
+			}
+			.number-box button:nth-child(3){
+				top: 23px;
+				border-top: 1px solid #ccc;
+			}
+			
+			.delete{
+				float: left;
+				margin-left: 65px;
+			}
+			.hj{
+				width: 1200px;
+				height: 40px;
+			}
+			.hj span{
+				display: inline-block;
+				width: 60px;
+				height: 40px;
+				line-height: 40px;
+				text-align: center;
+			}
+			.hj .pri{
+				margin-left: 1070px;
+			}
+			.hj .js{
+				background: #ccc;
+				color: #fff;
+				cursor:pointer;
+			}
+			
+		
+		</style>
+	</head>
+	<body>
+		<!--头部-->
+		<div id="header">
+			<div id="box">
+				
+			</div>
+		</div>
+		
+		<div id="shop-box">
+			<div id="shop-box-content">
+				<h2>我的购物车</h2>
+				<ul class="ul1-one">
+					<li><input type="checkbox" id="check"> 全选</li>
+					<li>商品</li>
+					<li>单价</li>
+					<li>数量</li>
+					<li>操作</li>
+				</ul>
+				<div id="shop-content">
+					<!--购物车商品1-->
+				<script type="text/html" id="shopcart">
+					{{each catt item i}}
+					<div class="catt">
+						<div class="choose">
+							<input type="checkbox" class="chec">
+						</div>
+						
+						<div class="phone-huawei">
+							<img src="{{catt[i].img}}" >
+							<span>{{catt[i].name}}</span>
+						</div>
+						
+						<div class="price">
+							<span class="spanprice">{{catt[i].price}}</span>
+						</div>
+						
+						<div class="number">
+							<div class="number-box">
+								<span class="num">{{catt[i].num}}</span>
+								<button class="plus">+</button>
+								<button class="reduce">-</button>
+							</div>
+						</div>
+						
+						<div class="delete">
+							<a href="#" class="del">删除</a>
+						</div>
+					</div>
+					{{/each}}
+				</script>
+					<!--购物车1结束-->
+				</div>
+				<!--结算-->
+				<div class="hj">
+					<span class="pri">00</span>
+					<span class="js">结算</span>
+				<div>
+			</div>
+			
+		</div>
+		<!--登录框-->
+		<div class="login">	
+		</div>
+		
+		<!--尾部-->
+		<div class="footer">
+			
+		</div>
+		<div class="footer-two">
+			
+		</div>
+		<script src="/libs/require/require.js" data-main="/js/index.js"></script>
+	</body>
+</html>

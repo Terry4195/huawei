@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link href="images/logo/favicon.ico" rel="shortcut icon">
+		<title>华为商城</title>
+		<link rel="stylesheet" type="text/css" href="/css/index.css"/>
+	</head>
+	<body>
+		<div id="header">
+			<div id="box">
+				
+			</div>
+		</div>
+		
+		
+		<!--轮播图-->
+		<div id="div1">
+		
+		</div>
+		
+		<!--内容部分-->
+		<div id="content">
+			<div id="head-box">
+				<div id="head">
+					<span>华为精品</sapn>
+				</div>
+				<ul class="wares"></ul>
+					<script type="text/html" id="huawei-jp">
+						{{each mainList item i}}
+						
+							<li><a href="/html/detailsxq.html?id={{mainList[i].id}}"><img src="{{mainList[i].src}}"></a></li>
+						
+						{{/each}}
+					</script>
+				<ul class="wares-two">
+					<li><a href="#"><img src="/images/ware/s5.png"/></a></li>
+					<li><a href="#"><img src="/images/ware/s6.png"/></a></li>
+					<li><a href="#"><img src="/images/ware/s7.JPG"/></a></li>
+				</ul>
+			</div>
+			
+			<div id="head-box-two">
+				<div id="head-two">
+					<span>手机</span>
+					<ul class="head-three">
+						<li><a href="#">HUAWEI Mate系列</a></li>
+						<li><a href="#">HUAWEI P系列</a></li>
+						<li><a href="#">HUAWEI nova系列</a></li>
+						<li><a href="#">HUAWEI 麦芒系列</a></li>
+						<li><a href="#">华为畅享系列</a></li>
+					</ul>
+					<a href="#" class="more">更多</a>
+				</div>
+					<ul class="wares-three">
+						
+					</ul>
+					<script type="text/html" id="huawei-phone">
+						{{each phone item i}}
+							<li><a href="#"><img src="{{phone[i].src}}"></a></li>
+							<div id="details">
+								<p>{{phone[i].name}}</p>
+								<span>{{phone[i].price}}</span>
+							</div>
+						{{/each}}
+					</script>
+					
+				<div class="ware-four">
+						<ul class="ware-f">
+							<li>
+								<a href="/html/detailsxq.html?id=1"><img src="/images/ware-four/w1.jpg" ></a>
+								<div class="ware-f-box">
+									<p>HUAWEI 畅享8</p>
+									<b>￥5399</b>
+								</div>
+							</li>
+							<li>
+								<a href="/html/detailsxq.html?id=1"><img src="/images/ware-four/w2.png" ></a>
+								<div class="ware-f-box">
+									<p>HUAWEI MaTe10</p>
+									<b>￥3399</b>
+								</div>
+							</li>
+							<li>
+								<a href="/html/detailsxq.html?id=1"><img src="/images/ware-four/w3.jpg" ></a>
+								<div class="ware-f-box">
+									<p>HUAWEI MATE RS</p>
+									<b>￥18999</b>
+								</div>
+							</li>
+							<li>
+								<a href="/html/detailsxq.html?id=1"><img src="/images/ware-four/w5.jpg" ></a>
+								<div class="ware-f-box">
+									<p>HUAWEI MATE RS</p>
+									<b>￥18999</b>
+								</div>
+							</li>
+							<li>
+								<a href="/html/detailsxq.html?id=1"><img src="/images/ware-four/w6.jpg" ></a>
+								<div class="ware-f-box">
+									<p>HUAWEI MATE RS</p>
+									<b>￥18999</b>
+								</div>
+							</li>
+							<li>
+								<a href="/html/detailsxq.html?id=1"><img src="/images/ware-four/w7.jpg" ></a>
+								<div class="ware-f-box">
+									<p>HUAWEI MATE RS</p>
+									<b>￥18999</b>
+								</div>
+							</li>
+							<li>
+								<a href="/html/detailsxq.html?id=1"><img src="/images/ware-four/w8.jpg" ></a>
+								<div class="ware-f-box">
+									<p>HUAWEI MATE RS</p>
+									<b>￥18999</b>
+								</div>
+							</li>
+							<li>
+								<a href="/html/detailsxq.html?id=1"><img src="/images/ware-four/w8.jpg" ></a>
+								<div class="ware-f-box">
+									<p>HUAWEI MATE RS</p>
+									<b>￥18999</b>
+								</div>
+							</li>
+							<li>
+								<a href="/html/detailsxq.html?id=1"><img src="/images/ware-four/w8.jpg" ></a>
+								<div class="ware-f-box">
+									<p>HUAWEI MATE RS</p>
+									<b>￥18999</b>
+								</div>
+							</li>
+						</ul>
+						<span class="prev"><</span>
+						<span class="next">></span>
+				</div>
+			</div>
+				<div class="pc">
+					<div id="head-two">
+						<span>手机周边</span>
+					</div>
+					<ul class="ware-fours">
+						
+					</ul>
+					<script type="text/html" id="huawei-zb">
+						{{each zb item i}}
+							<li class="zb"><a href="#"><img src="{{zb[i].src}}"></a></li>
+							<div id="detail">
+								<p>{{zb[i].name}}</p>
+								<span>{{zb[i].price}}</span>
+							</div>
+						{{/each}}
+					</script>
+				</div>
+				<!--登录框-->
+				<div class="login">	
+				</div>
+				
+		</div>
+				
+		<!--尾部-->
+				<div class="footer">
+				
+				</div>
+				<div class="footer-two">
+				
+				</div>
+			
+		<script src="/libs/require/require.js" data-main="/js/index.js" charset="UTF-8"></script>
+	</body>
+</html>

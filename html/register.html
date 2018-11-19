@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="utf-8">
+		<link href="images/logo/favicon.ico" rel="shortcut icon">
+		<title>注册</title>
+	</head>
+	<style type="text/css">
+		ul li{list-style: none;}
+		a{text-decoration: none;}
+		*{margin: 0; padding: 0;}
+		body{
+			background: #f2f2f2;
+		}
+		header{
+			width: 100%;
+			height: 67px;
+			background: black;
+		
+		}
+		.register-head{
+			width: 960px;
+			height: 67px;
+			margin: 0 auto;
+		}
+		.register-logo{
+			width: 262px;
+			height: 67px;
+			font-size: 18px;
+			color: #ccc;
+		}
+		.register-logo ul li{
+			float: left;
+			margin: 0 6px;
+			line-height: 67px;
+		}
+		.register-logo ul li:first-child{
+			height: 30px;
+		}
+		.register-logo ul li:first-child img{
+			height: 30px;
+			margin-top: 17px;
+		}
+		.register-logo ul li:last-child{
+			color: #fff;
+			
+		}
+		/*中间部分*/
+		.content{
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+			
+		}
+		.content-box{
+			width: 698px;
+			height: 330px;
+			background: #fff;
+			margin: 0 auto;
+			margin-top: 90px;
+			padding-left: 262px;
+			padding-top: 40px;
+		}
+		.register-form div{
+			width: 420px;
+			height: 42px;
+			border-right 50%;
+			outline: none;
+			margin-bottom: 20px;
+			border: 1px solid #ccc;
+			border-radius: 50px;
+			padding-left: 10px;
+		}
+		.register-form div span{
+			display: inline-block;
+			width: 80px;
+			height: 42px;
+			line-height: 42px;
+			font-size: 14px;
+			border-right: 1px solid #ccc;
+			padding-left: 10px;
+		}
+		.register-form div input{
+			width: 295px;
+			height: 34px;
+			border: none;
+			padding-left: 5px;
+			outline-style: none;
+		}
+		.register-form button{
+			width: 200px;
+			height: 40px;
+			background: red;
+			color: #fff;
+			font-size: 14px;
+			outline-style: none;
+			margin-left: 116px;
+			border-radius: 50px;
+			margin-top: 10px;
+			border: none;
+		}
+		.register-footer{
+			width: 960px;
+			margin: 0 auto;
+			margin-top: 40px;
+			font-size: 12px;
+			color: #ccc;
+		}
+		.register-footer b{
+			display: block;
+			height: 1px;
+			border-bottom: 1px solid #ccc;
+		}
+		.register-footer ul{
+			margin-left: 300px;
+			margin-top: 22px;
+			width: 960px;
+			height: 20px;
+		}
+		.register-footer ul li{
+			float: left;
+			padding:0 5px;
+		}
+		.register-footer ul li a{
+			color: #ccc;
+		}
+		.register-footer .register-footer-p{
+			margin-left: 180px;
+		}
+	</style>
+	<script src="/libs/jquery/jquery-1.11.3.js"></script>
+	<body>
+		<header>
+			<div class="register-head">
+				<div class="register-logo">
+					<ul>
+						<li><img src="/images/logo/register-logo.png"></li>
+						<li><b>|</b></li>
+						<li>华为商城</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<div class="content">
+			<div class="content-box">
+				<form action="" class="register-form">
+					<div>
+						<span>输入账号</span><input type="text"   name="" value="" class="register-username" id="register-username" placeholder="请输入手机号"/><br>
+					</div>
+					<div>
+						<span>输入邮箱</span><input type="text" name="email" value="" class="email" placeholder="请输入邮箱"/><br>
+					</div>
+					<div>
+						<span>输入密码</span><input type="password" name=""  value="" id="register-password" class="register-password" placeholder="请输入密码"><br>
+					</div>
+					<div>
+						<span>确认密码</span><input type="password" name=""  placeholder="请再次输入密码">
+					</div>
+					<button type="submit" id="register-btn">注册</button>
+				</form>
+			</div>
+			<div class="register-footer">
+				<b></b>
+				<ul>
+					<li><a href="#">华为帐号用户协议</a></li>
+					<li>|</li>
+					<li><a href="#">关于华为帐号与隐私的声明</a></li>
+					<li>|</li>
+					<li><a href="#">常见问题</a></li>
+				</ul>
+				<br>
+				<p class="register-footer-p">Copyright © 2011-2018  华为软件技术有限公司  版权所有  保留一切权利  苏B2-20070200号 | 苏ICP备09062682号-9</p>
+			</div>
+		</div>
+		<script>
+			//未做表单验证
+			$("#register-btn").on("click",function(){
+				var username = $("#register-username").val(),
+					password = $("#register-password").val();
+				$.ajax({
+					url:"http://localhost/gulp-lod/app/api/register-insert.php",
+					data: {
+						"username" : username,
+						"password" : password
+						},
+					dataType:"json",
+					method:"POST",
+					success: function(msg){
+					if(msg.code === 1){
+						alert("恭喜注册成功");
+						location.href="http://localhost:520/index.html";
+						
+					}else{
+						alert("注册失败");
+						}
+					}
+				
+				});
+				e.preventDefault();
+				return false;
+			})
+		</script>
+	</body>
+</html>

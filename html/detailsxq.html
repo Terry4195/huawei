@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link href="images/logo/favicon.ico" rel="shortcut icon">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="/css/index.css"/>
+	<style type="text/css">
+		.details-content{
+			width: 100%;
+			height: auto;
+		}
+		.details-content .details-content-center{
+			width: 1200px;
+			height: 555x;
+			margin: 0 auto;
+			position: relative;
+		}
+		.details-content .details-content-center .head-p{
+			height: 49px;
+			line-height: 49px;
+		}
+		.details-content .details-content-center .head-p a{
+			color: black;
+		}
+		.details-content .details-content-center .content-box{
+			height: 555px;
+		}
+		.details-content .details-content-center .content-box .content-box-left{
+			width: 454px;
+			float: left;
+			height: 555px;
+		}
+		.details-content .details-content-center .content-box .content-box-left .img{
+			width: 454px;
+			height: 386px;
+			overflow: hidden;
+			position: relative;
+			margin-bottom: 70px;
+		}
+		.details-content .details-content-center .content-box .content-box-left .img .ul-fdj{
+			position: absolute;
+			height: 385px;
+			
+		}
+		.details-content .details-content-center .content-box .content-box-left .img .ul-fdj li img{
+			width: 400px;
+			height: 385px;
+			margin-left: 25px;
+		}
+		.details-content .details-content-center .content-box .content-box-left .img .ul-fdj li{
+			float: left;
+		}
+		.details-content .details-content-center .content-box .content-box-left .img .fdj{
+			width: 227px;
+			height: 193px;
+			background: yellow;
+			position: absolute;
+			display: inline-block;
+			display: none;
+			left: 0;
+			margin: 0 auto;
+		}
+		.details-content .details-content-center .content-box .content-box-left .miniimg{
+			width: 454px;
+			margin-top: 10px;
+			position: relative;
+		}
+		.details-content .details-content-center .content-box .content-box-left .miniimg .miniimg-img{
+			width: 328px;
+			height: 88px;
+			margin-left: 64px;
+			position: relative;
+			overflow: hidden;
+		}
+		.details-content .details-content-center .content-box .content-box-left .miniimg .ol-fdj{
+			position: absolute;
+			
+		}
+		.details-content .details-content-center .content-box .content-box-left .miniimg .ol-fdj li{
+			width: 80pxpx;
+			height: 80pxpx;
+			float: left;
+			border: 1px solid #ccc;
+		}
+		.details-content .details-content-center .content-box .content-box-left .miniimg .ol-fdj li img{
+			width: 80px;
+			height: 80px;
+		}
+		.details-content .details-content-center .content-box .content-box-left .miniimg span{
+			position: absolute;
+			left: 10px;
+			top: 30px;
+			font-size: 30px;
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			text-align: center;
+			border: 1px solid #ccc;
+			border-radius: 50%;
+			color: #ccc;
+			cursor: pointer;
+		}
+		.details-content .details-content-center .content-box .content-box-left .miniimg .next-fdj{
+			left: 400px;
+		}
+		.details-content .details-content-center .content-box .content-box-right{
+			width: 746px;
+			float: left;
+			height: 555px;
+		}
+		h2{
+			line-height: 40px;	
+		}
+		h2 a{
+			display: block;
+			line-height: 50px;
+		}
+		.huawei-box{
+			height: 92px;
+			background: #ccc;
+			margin-top: 20px;
+			overflow: hidden;
+			padding-left: 10px;
+			padding-top: 20px;
+		}
+		.huawei-box p:first-child span:last-child{
+			margin-top: 16px;
+			font-size: 18px;
+			color: red;
+		}
+		.huawei-box span{
+			margin-right: 20px;
+			font-size: 12px;
+			color: black;
+		}
+		.huawei-box b{
+			display: inline-block;
+			border: 1px solid red;
+			color: red;
+			font-weight: normal;
+		}
+		.huawei-box b:nth-child(2){
+			margin-top: 30px;
+		}
+		.readme{
+			height: 56px;
+			border-bottom: 1px solid #ccc;
+			margin-top: 14px;
+		}
+		.readme p{
+			height: 27px;
+			line-height: 27px;
+		}
+		/*选项*/
+		.phone-option{
+			height: 250px;
+			margin-top: 15px;
+		}
+		.phone-option b{
+			display: inline-block;
+			border: 1px solid;
+			height: 40px;
+			line-height: 40px;
+			font-weight: normal;
+			font-size: 12px;
+		}
+		.phone-option span{
+			width: 85px;
+			height: 40px;
+			display: inline-block;
+			line-height: 50px;
+			float: left;
+		}
+		/*前面所有的选择都是一个样式，所以span一起*/
+		.phone-option .phone-color{
+			height: 40px;
+		}
+		.phone-option .phone-color .color{
+			height: 43px;
+		}
+		.phone-option .phone-color .color b{
+			width: 98px;
+			margin-right: 10px;
+			float: left;
+		}
+		.phone-option .phone-color .color b img{
+			width: 30px;
+			height: 30px;
+			margin-top: 5px;
+		}
+		.phone-option .edition{
+			margin-top: 15px;
+			height: 40px;
+		}
+		.phone-option .edition b{
+			width: 127px;
+			border: 1px solid;
+			margin-right: 10px;
+			float: left;
+		}
+		.phone-option .meal{
+			margin-top: 15px;
+			height: 40px;
+		}
+		.phone-option .meal b{
+			border: 1px solid;
+			text-align: center;
+		}
+		.phone-option #shopping{
+			height: 60px;
+			margin-top: 30px;
+		}
+		.phone-option #shopping a{
+			display: inline-block;
+			width:170px;
+			height: 60px;
+			line-height: 60px;
+			text-align: center;
+			background: red;
+			color: #fff;
+		}
+		.phone-option #shopping a:first-child{
+			background: #fc600c;
+			margin-right: 40px;
+		}
+		.info{
+			height: 30px;
+			width: 1200px;
+			text-align: center;
+		}
+		.info-img ul li img{
+			width: 100%;
+			min-width: 1000px;
+		}
+		.big{
+			width: 454px;
+			height: 386px;
+			border: 1px solid;
+			position: absolute;
+			top: 20px;
+			left: 450px;
+			background: #ccc;
+			overflow: hidden;
+			display: none;
+		}
+		.big img{
+			width:908px;
+			height:772px;
+			position: absolute;
+		}
+	</style>
+	<body>
+		<!--头部-->
+		<div id="header">
+			<div id="box">
+				
+			</div>
+		</div>
+		<!--内容-->
+		<div class="details-content">
+			<div class="details-content-center"></div>
+			<script type="text/html" id="detail">
+				<p class="head-p">
+					<a href="/index.html">首页></a>
+					<a href="/html/classify.html">手机></a>
+					<span>{{details[0].head2}}></span>
+					<span class= "phonename">{{details[0].head3}}</span>
+					
+				</p>
+				
+				
+				<div class="content-box">
+					<div class="content-box-left">
+						<div class="img">
+							<ul class="ul-fdj">
+								<li><img src="{{details[0].bigimg}}"  class="ig"></li>
+								<li><img src="{{details[0].bigimg1}}" ></li>
+								<li><img src="{{details[0].bigimg2}}" ></li>
+								<li><img src="{{details[0].bigimg3}}" ></li>
+								<li><img src="{{details[0].bigimg4}}" ></li>
+								<li><img src="{{details[0].bigimg5}}" ></li>
+								<li><img src="{{details[0].bigimg}}"  ></li>
+								<li><img src="{{details[0].bigimg1}}" ></li>
+								<li><img src="{{details[0].bigimg2}}" ></li>
+								<li><img src="{{details[0].bigimg3}}" ></li>
+								<li><img src="{{details[0].bigimg4}}" ></li>
+								<li><img src="{{details[0].bigimg5}}" ></li>
+							</ul>
+							<span class="fdj"></span>
+						</div>
+						<div class="miniimg">
+							<div class="miniimg-img">
+								<ol class="ol-fdj">
+									<li><img src="{{details[0].bigimg}}" ></li>
+									<li><img src="{{details[0].bigimg1}}" ></li>
+									<li><img src="{{details[0].bigimg2}}" ></li>
+									<li><img src="{{details[0].bigimg3}}" ></li>
+									<li><img src="{{details[0].bigimg4}}" ></li>
+									<li><img src="{{details[0].bigimg5}}" ></li>
+									<li><img src="{{details[0].bigimg}}" ></li>
+									<li><img src="{{details[0].bigimg1}}" ></li>
+									<li><img src="{{details[0].bigimg2}}" ></li>
+									<li><img src="{{details[0].bigimg3}}" ></li>
+									<li><img src="{{details[0].bigimg4}}" ></li>
+									<li><img src="{{details[0].bigimg5}}" ></li>
+									<li><img src="{{details[0].bigimg3}}" ></li>
+									
+								</ol>
+							</div>
+							<span class="prev-fdj"><</span>
+							<span class="next-fdj">></span>
+						</div>
+					</div>
+					
+					<div class="content-box-right">
+						<div class="H2">
+							
+							<h2>{{details[0].head3}}</h2>
+						</div>
+						<a href="#">【仅UD版支持屏内指纹】购机用户享掌上生活6期免息，预计12月11日以前发货，老用户购机享更多福利，老用户专属购机通道点击购买>>>></a>
+						<div class="huawei-box">
+							<p><span>价&nbsp;&nbsp;格</span><span class="pric">{{details[0].price}}</span></p>
+							<p>
+								<span>促&nbsp;&nbsp;销</span>
+								<b>分期免息</b>
+								<b>积分翻倍</b>
+							</p>
+						</div>
+						
+						<div class="readme">
+							<p>服务说明&nbsp;&nbsp;&nbsp;已满48元已免运费&nbsp;|&nbsp;由华为商城负责发货，&nbsp;并提供售后服务</p>
+							<p>商品编码&nbsp;&nbsp;&nbsp;2601010067901</p>
+						</div>
+						
+						<div class="phone-option">
+							<!--手机颜色选择-->
+							<div class="phone-color">
+								
+								<div class="color">
+									<span>颜色选择</span>
+									<div class="b1">
+										<b><img src="/images/mini-color/mini1.png" >亮黑色</b>
+										<b><img src="/images/mini-color/mini1.png" >亮黑色</b>
+										<b><img src="/images/mini-color/mini1.png" >亮黑色</b>
+										<b><img src="/images/mini-color/mini1.png" >亮黑色</b>
+										<b><img src="/images/mini-color/mini1.png" >亮黑色</b>
+										<b><img src="/images/mini-color/mini1.png" >亮黑色</b>
+									</div>
+								</div>
+							</div>
+							<!--选择版本-->
+							<div class="edition">
+								<span>版本选择</span>
+								<div class="b2">
+									<b>全网通6GB+128GB</b>
+									<b>全网通6GB+128GB</b>
+									<b>全网通6GB+128GB</b>
+								</div>
+							</div>
+							<!--套餐选择-->
+							<div class="meal">
+								<span>套餐选择</span>
+								<b>官方标配</b>
+							</div>
+							
+							<div id="shopping">
+								<a href="/html/shopcar.html" id ="put-car">加入购物车</a>
+								<a href="/html/shopcar.html">立即下单</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--放大镜盒子-->
+				<div class="big">
+					<img src="/images/fdj/fdj1.png" class="bigimg" >
+				</div>
+				<div class="info">
+					<h4>商品详情</h4>
+				</div>
+			</script>
+		
+		<!--这里以上数据库添加数据-->
+		<div class="info-img">
+			<ul>
+				<li><img src="/images/info/info1.jpg" ></li>
+				<li><img src="/images/info/info2.jpg" ></li>
+				<li><img src="/images/info/info3.jpg" ></li>
+				<li><img src="/images/info/info4.png" ></li>
+				<li><img src="/images/info/info17.png" ></li>
+				<li><img src="/images/info/info18.png" ></li>
+				<li><img src="/images/info/info19.png" ></li>
+				<li><img src="/images/info/info20.png" ></li>
+				<li><img src="/images/info/info21.png" ></li>
+				<li><img src="/images/info/info22.png" ></li>
+				<li><img src="/images/info/info23.png" ></li>
+			</ul>
+		</div>
+		<!---登录框-->
+		<div class="login">	
+		</div>
+		<!--尾部-->
+		<div class="footer">
+			
+		</div>
+		<div class="footer-two">
+			
+		</div>
+	<script src="/libs/require/require.js" data-main="/js/index.js"></script>
+	</body>
+</html>
